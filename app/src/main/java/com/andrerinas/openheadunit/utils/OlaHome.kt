@@ -15,13 +15,14 @@ object OlaHome {
     private val MOVE_OS_HOME =
         ComponentName("com.olaelectric.hmiclient", "com.olaelectric.hmiclient.MainActivity")
 
+    /** Whether this is an Ola dash, judged by its MoveOS home screen being installed. */
+    fun isPresent(context: Context): Boolean =
+        context.packageManager.resolveActivity(moveOsIntent(), 0) != null
+
     fun launch(context: Context): Boolean {
-        val intent = Intent(Intent.ACTION_MAIN)
-            .setComponent(MOVE_OS_HOME)
-            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-        if (context.packageManager.resolveActivity(intent, 0) == null) return false
+        if (!isPresent(context)) return false
         return try {
-            context.startActivity(intent)
+            context.startActivity(moveOsIntent())
             AppLog.i("OlaHome: started the MoveOS home screen")
             true
         } catch (e: Exception) {
@@ -29,4 +30,8 @@ object OlaHome {
             false
         }
     }
+
+    private fun moveOsIntent() = Intent(Intent.ACTION_MAIN)
+        .setComponent(MOVE_OS_HOME)
+        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
 }
