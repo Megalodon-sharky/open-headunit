@@ -50,6 +50,7 @@ import com.andrerinas.openheadunit.utils.AppLog
 import com.andrerinas.openheadunit.utils.ScreenPower
 import com.andrerinas.openheadunit.utils.BluetoothHelper
 import com.andrerinas.openheadunit.utils.CarLauncherManager
+import com.andrerinas.openheadunit.utils.OlaHome
 import com.andrerinas.openheadunit.connection.self.SelfModeCallRaisePolicy
 import com.andrerinas.openheadunit.connection.usb.UsbSwitchClaim
 import com.andrerinas.openheadunit.connection.usb.UsbDeviceCompat
@@ -2013,6 +2014,8 @@ class AapProjectionActivity : SurfaceActivity(), IProjectionView.Callbacks, Vide
         // user reported being dropped into the factory launcher with the session left behind. When
         // this app is the home app, it is named, so the projection goes behind our own home screen.
         val isHome = CarLauncherManager.isDefaultLauncher(this)
+        // Ola S1 build: MoveOS is the scooter's home screen but not the system home app.
+        if (!isHome && OlaHome.launch(this)) return
         val startMain = if (isHome) {
             Intent(this, MainActivity::class.java).apply {
                 action = Intent.ACTION_MAIN
@@ -2844,6 +2847,7 @@ class AapProjectionActivity : SurfaceActivity(), IProjectionView.Callbacks, Vide
         }
 
         fun minimizeToHome(context: Context) {
+            if (OlaHome.launch(context)) return
             try {
                 val homeIntent = Intent(Intent.ACTION_MAIN).apply {
                     addCategory(Intent.CATEGORY_HOME)

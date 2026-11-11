@@ -56,6 +56,7 @@ import com.andrerinas.openheadunit.utils.ActivityState
 import com.andrerinas.openheadunit.utils.AppLog
 import com.andrerinas.openheadunit.utils.AppPermissions
 import com.andrerinas.openheadunit.utils.CarLauncherManager
+import com.andrerinas.openheadunit.utils.OlaHome
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -1821,6 +1822,7 @@ class HomeFragment : Fragment() {
             }
             ContextCompat.startForegroundService(requireContext(), stopServiceIntent)
         }
+        OlaHome.launch(requireContext())
         requireActivity().finishAffinity()
     }
 

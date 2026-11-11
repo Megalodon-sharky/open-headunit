@@ -49,6 +49,7 @@ import com.andrerinas.openheadunit.utils.AppLog
 import com.andrerinas.openheadunit.utils.ScreenPower
 import com.andrerinas.openheadunit.utils.AppPermissions
 import com.andrerinas.openheadunit.utils.CarLauncherManager
+import com.andrerinas.openheadunit.utils.OlaHome
 import com.andrerinas.openheadunit.utils.OnboardingLauncherPolicy
 import com.andrerinas.openheadunit.utils.ConnectionIssue
 import com.andrerinas.openheadunit.utils.ConnectionIssues
@@ -1196,6 +1197,7 @@ class MainActivity : BaseActivity() {
                 this.action = AapService.ACTION_STOP_SERVICE
             }
             ContextCompat.startForegroundService(this, exitIntent)
+            OlaHome.launch(this)
             finishAffinity()
             return
         }
@@ -1261,6 +1263,7 @@ class MainActivity : BaseActivity() {
                     action = AapService.ACTION_STOP_SERVICE
                 }
                 ContextCompat.startForegroundService(this, exitIntent)
+                OlaHome.launch(this)
                 finishAffinity()
             }
         }

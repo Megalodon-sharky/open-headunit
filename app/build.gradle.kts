@@ -93,11 +93,11 @@ android {
         // installs, testers) and existing users just get a normal update. Only the display name
         // changed to Open Headunit. The code package and namespace stay openheadunit, so the
         // applicationId deliberately differs from the namespace, like com.google.talk for Hangouts.
-        applicationId = "com.andrerinas.headunitrevived"
+        applicationId = "com.asjohn720.androidauto" // Ola S1 build: the id the S1 Mods toolkit installs
         minSdk = 16
         targetSdk = 36
         versionCode = 123
-        versionName = "4.0.0"
+        versionName = "4.0.0-olas1"
         setProperty("archivesBaseName", "${applicationId}_${versionName}")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled = true
