@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Open Headunit</string>
+    <string name="app_name">Android Auto</string>
     <string name="menu">เมนู</string>
     <string name="settings">การตั้งค่า</string>
 
@@ -234,7 +234,7 @@
     <string name="no_apps_found">ไม่พบแอปพลิเคชัน</string>
     <string name="video">Android Auto</string>
     <string name="self_mode">โหมดตนเอง (Self Mode)</string>
-    <string name="title">Open Headunit</string>
+    <string name="title">Android Auto</string>
     <string name="remove">ลบ</string>
     <string name="usb">USB</string>
     <string name="wifi">Wi-Fi</string>

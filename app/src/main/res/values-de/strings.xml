@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Open Headunit</string>
+    <string name="app_name">Android Auto</string>
     <string name="menu">Menü</string>
     <string name="settings">Einstellungen</string>
 
@@ -20,7 +20,7 @@
     <string name="no_apps_found">Keine Apps gefunden</string>
     <string name="video">Android Auto</string>
     <string name="self_mode">Self Mode</string>
-    <string name="title">Open Headunit</string>
+    <string name="title">Android Auto</string>
     <string name="remove">Entfernen</string>
     <string name="usb">USB</string>
     <string name="wifi">WLAN</string>

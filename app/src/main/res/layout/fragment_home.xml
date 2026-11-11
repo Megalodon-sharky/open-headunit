@@ -102,15 +102,16 @@
         <!-- The same tile as Settings, label under the icon: beside it, a longer word ("Выход" in
              a wide font) did not fit and ended in "...". HomeUiHelper.fitDriverBar shrinks it with
              the others on a short screen. -->
+        <!-- Ola S1 build: this tile is OLA Home, back to the MoveOS home screen (HomeFragment). -->
         <LinearLayout
             android:id="@+id/exit_button"
             style="@style/HomeTile">
             <ImageView
                 style="@style/HomeTileIcon"
-                app:srcCompat="@drawable/ic_power_white" />
+                app:srcCompat="@drawable/ic_home" />
             <com.andrerinas.openheadunit.view.WordFitTextView
                 style="@style/HomeTileLabel.Wrap"
-                android:text="@string/exit" />
+                android:text="@string/ola_home" />
         </LinearLayout>
 
     </LinearLayout>

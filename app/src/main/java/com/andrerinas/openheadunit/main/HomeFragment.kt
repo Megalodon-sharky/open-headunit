@@ -250,12 +250,15 @@ class HomeFragment : Fragment() {
         ).forEach { id ->
             container.findViewById<View>(id)?.setOnLongClickListener { showPageMenu(widgetPage = null) }
         }
+        // Ola S1 build: the credit opens this build's branch on GitHub.
+        container.findViewById<View>(R.id.home_credit)?.setOnClickListener { OlaHome.openCredit(requireContext()) }
         setupListeners()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         renderHome()
+        OlaHome.showPairingGuideOnce(requireContext())
 
         activity?.findViewById<View>(R.id.status_notices)?.let { notices ->
             val listener = View.OnLayoutChangeListener { _, _, _, _, _, _, _, _, _ ->
@@ -1773,7 +1776,8 @@ class HomeFragment : Fragment() {
 
     private fun setupListeners() {
         appsButton.setOnClickListener { openAppDrawer() }
-        exitButton.setOnClickListener { exitApp() }
+        // Ola S1 build: the Exit tile is OLA Home. It goes to MoveOS, or to the system home elsewhere.
+        exitButton.setOnClickListener { AapProjectionActivity.minimizeToHome(requireContext()) }
         selfModeTile.setOnClickListener { onSelfModeClicked() }
         usbTile.setOnClickListener { onUsbClicked() }
         wifiTile.setOnClickListener { onWifiClicked() }

@@ -231,17 +231,7 @@
             </intent-filter>
         </activity>
 
-        <activity-alias
-            android:name=".CarLauncherAlias"
-            android:targetActivity=".main.MainActivity"
-            android:enabled="false"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.HOME" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity-alias>
+        <!-- Ola S1 build: no car launcher alias, so this app never offers itself as the home app. -->
 
         <activity
             android:name=".main.SettingsActivity"
@@ -405,47 +395,21 @@
             android:name=".app.BootCompleteReceiver"
             android:directBootAware="true"
             android:exported="true">
-            <intent-filter>
-                <!-- Standard Android boot -->
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
-                <action android:name="android.intent.action.USER_UNLOCKED" />
-                <!-- Generic / OEM quick boot -->
-                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
-                <!-- MediaTek IPO (Instant Power On) -->
-                <action android:name="com.mediatek.intent.action.QUICKBOOT_POWERON" />
-                <action android:name="com.mediatek.intent.action.BOOT_IPO" />
-                <!-- FYT / GLSX head units (ACC ignition wake) -->
-                <action android:name="com.fyt.boot.ACCON" />
-                <action android:name="com.glsx.boot.ACCON" />
-                <action android:name="android.intent.action.ACTION_MT_COMMAND_SLEEP_OUT" />
-                <!-- Microntek / MTCD / PX3 head units (ACC wake) -->
-                <action android:name="com.cayboy.action.ACC_ON" />
-                <action android:name="com.carboy.action.ACC_ON" />
-                <!-- XYAuto head units (ACC wake) -->
-                <action android:name="xy.android.acc.on" />
-                <!-- Autochips / MediaTek QuickBoot units (ACC wake) -->
-                <action android:name="autochips.intent.action.QB_POWERON" />
-            </intent-filter>
+            <!-- Ola S1 build: no auto-start trigger; the rider opens the app. -->
         </receiver>
 
         <receiver
             android:name=".app.AutoStartReceiver"
             android:directBootAware="true"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.bluetooth.device.action.ACL_CONNECTED" />
-            </intent-filter>
+            <!-- Ola S1 build: no auto-start trigger; the rider opens the app. -->
         </receiver>
 
         <receiver
             android:name=".app.WifiAutoStartReceiver"
             android:directBootAware="true"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.net.wifi.STATE_CHANGE" />
-            </intent-filter>
+            <!-- Ola S1 build: no auto-start trigger; the rider opens the app. -->
         </receiver>
 
         <activity

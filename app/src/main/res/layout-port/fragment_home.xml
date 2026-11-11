@@ -105,6 +105,7 @@
                 android:text="@string/settings" />
         </LinearLayout>
 
+        <!-- Ola S1 build: this tile is OLA Home, back to the MoveOS home screen (HomeFragment). -->
         <LinearLayout
             android:id="@+id/exit_button"
             style="@style/HomeTile"
@@ -112,10 +113,10 @@
             android:layout_weight="1">
             <ImageView
                 style="@style/HomeTileIcon"
-                app:srcCompat="@drawable/ic_power_white" />
+                app:srcCompat="@drawable/ic_home" />
             <com.andrerinas.openheadunit.view.WordFitTextView
                 style="@style/HomeTileLabel.Wrap"
-                android:text="@string/exit" />
+                android:text="@string/ola_home" />
         </LinearLayout>
 
     </LinearLayout>

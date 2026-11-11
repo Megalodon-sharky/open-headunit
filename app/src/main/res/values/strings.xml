@@ -9,7 +9,7 @@
     <string name="bt_manufacturer_devices_title">Devices paired through the head unit</string>
     <string name="bt_manufacturer_devices_message">The head unit saved these devices in its own Bluetooth list:\n\n%1$s\n\nAndroid does not list them as paired. They cannot be selected for Android Bluetooth triggers or phone wake-up here. This saved list does not tell us whether they are connected or whether an Android Auto connection is available.</string>
     <string name="bt_manufacturer_devices_android_unavailable">The head unit saved these devices in its own Bluetooth list:\n\n%1$s\n\nThe Android Bluetooth list is currently unavailable. This saved list alone cannot be used for Android Bluetooth triggers or phone wake-up. It does not tell us whether these devices are connected or whether an Android Auto connection is available.</string>
-    <string name="app_name">Open Headunit</string>
+    <string name="app_name">Android Auto</string>
     <string name="menu">Menu</string>
     <string name="settings">Settings</string>
 
@@ -259,7 +259,7 @@
     <string name="no_apps_found">No applications found</string>
     <string name="video">Android Auto</string>
     <string name="self_mode">Self Mode</string>
-    <string name="title">Open Headunit</string>
+    <string name="title">Android Auto</string>
     <string name="remove">Remove</string>
     <string name="usb">USB</string>
     <string name="wifi">WiFi</string>
@@ -757,7 +757,7 @@
     <string name="pref_aa_exit_action_title">Android Auto Exit Action</string>
     <string name="pref_aa_exit_action_summary">Action when tapping Exit inside the Android Auto app drawer.</string>
     <string name="pref_aa_exit_action_help">Chooses what happens when you tap Exit in Android Auto. Return to OEM Launcher shows this unit\'s own home screen. Return to App Home shows this app\'s home screen. With these two, the phone stays connected. Disconnect Session ends the session. When this app is the car launcher, Return to OEM Launcher acts as Return to App Home.</string>
-    <string name="aa_exit_action_oem_launcher">Return to OEM Launcher (Minimize)</string>
+    <string name="aa_exit_action_oem_launcher">Return to OLA Home</string>
     <string name="aa_exit_action_app_home">Return to App Home</string>
     <string name="aa_exit_action_disconnect">Disconnect Session</string>
     <string name="forced_scale">Forced Scale (Legacy Fix)</string>
@@ -1396,7 +1396,7 @@
     <string name="exit_dialog_end_stay_armed">End session, stay ready</string>
     <string name="exit_dialog_end_stay_armed_note">Session ended. The WiFi network stays up, so your phone may reconnect on its own.</string>
     <string name="exit_dialog_pip">Picture-in-Picture</string>
-    <string name="exit_dialog_background">Move to Background</string>
+    <string name="exit_dialog_background">OLA Home</string>
     <string name="exit_dialog_settings">Quick Settings</string>
     <string name="gesture_hint">Tip: Swipe from the left edge with 2 fingers to open the exit menu.</string>
     <string name="audio_latency_multiplier">Audio Latency Multiplier</string>
@@ -1782,7 +1782,7 @@
     <string name="home_title_self_ready">Android Auto on this unit</string>
     <string name="home_subtitle_searching">Open Android Auto on the phone if it does not show up</string>
     <string name="home_subtitle_usb">Over USB cable</string>
-    <string name="home_subtitle_wifi">Over WiFi</string>
+    <string name="home_subtitle_wifi">Pair your phone with the scooter over Bluetooth, then open this app.</string>
     <string name="home_subtitle_self">Runs Android Auto on the radio itself</string>
     <string name="home_action_back_to_android_auto">Back to Android Auto</string>
     <string name="home_action_connect_now">Connect now</string>
@@ -1928,4 +1928,9 @@
     <string name="audio_matching_phase_gradient_hint">Slow playback</string>
     <string name="audio_matching_option" translatable="false">%1$s\n(%2$s)</string>
     <string name="audio_matching_description">OHU remains the default. WSOLA aligns overlapping waveforms; Phase Vocoder adjusts spectral phases. Short uses a shorter analysis window. Phase Gradient integrates phase gradients to reconstruct phases. These independent methods add processing latency; their names do not rank sound quality.\n\nNative methods: PCM music. Navigation, voice responses, system sounds and AAC use OHU.\nReconnect to apply. Removed engine preferences reset to OHU.</string>
+    <!-- Ola S1 build -->
+    <string name="ola_home">OLA Home</string>
+    <string name="ola_pairing_guide_title">Ola S1 Bluetooth Setup</string>
+    <string name="ola_pairing_guide_message"><![CDATA[<b>1.</b> In Ola Settings, turn on Bluetooth.<br><b>2.</b> Pair your phone with the scooter in Bluetooth settings, and confirm on both.<br><b>3.</b> Open this app to start Android Auto.<br><br><b>Paired them before?</b> Unpair (forget) the phone and the scooter on both sides first, then pair them again.]]></string>
+    <string name="credits_optimised_by">Optimised by Megalodon</string>
 </resources>

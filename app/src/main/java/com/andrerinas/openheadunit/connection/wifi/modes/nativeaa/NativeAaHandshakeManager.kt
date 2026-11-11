@@ -46,6 +46,7 @@ import com.andrerinas.openheadunit.connection.wifi.modes.nativeaa.zbt.ZbtAaCarri
 import com.andrerinas.openheadunit.connection.wifi.modes.nativeaa.zbt.ZbtAttemptPolicy
 import com.andrerinas.openheadunit.connection.wifi.modes.nativeaa.zbt.ZbtRetransmitPolicy
 import com.andrerinas.openheadunit.utils.AppLog
+import com.andrerinas.openheadunit.utils.OlaHome
 import com.andrerinas.openheadunit.utils.ConnectionIssue
 import com.andrerinas.openheadunit.utils.ConnectionIssues
 import kotlinx.coroutines.*
@@ -2496,8 +2497,13 @@ class NativeAaHandshakeManager(
                     AppLog.w("NativeAA: Dropping wake poke MAC(s) no longer paired: $staleMacs")
                     settings.nativePokeBtMacs = selectedMacs - staleMacs
                 }
+                // Ola S1 build: on an Ola dash, never poke every paired device; only a chosen phone.
+                val pokeAllPaired = settings.nativePokeAllPairedDevices && !OlaHome.isPresent(context)
+                if (settings.nativePokeAllPairedDevices && !pokeAllPaired) {
+                    AppLog.i("NativeAA: poking all paired devices is off on an Ola dash")
+                }
                 val devicesToPoke = when (val target = PokeTargetPolicy.targets(
-                    selectedMacs - staleMacs, settings.nativePokeAllPairedDevices, notPhones
+                    selectedMacs - staleMacs, pokeAllPaired, notPhones
                 )) {
                     is PokeTargets.Selected -> {
                         noteDroppedPokeTargets(target.dropped, chosen)

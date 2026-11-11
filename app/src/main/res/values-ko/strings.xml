@@ -3,7 +3,7 @@
     <string name="aaudio_output">AAudio 출력</string>
     <string name="aaudio_output_description">AAudio로 저지연 미디어 출력을 시도합니다. AAudio를 사용할 수 없으면 AudioTrack을 자동으로 사용합니다.</string>
     <string name="aaudio_output_help">Android Auto 미디어를 지연 시간이 짧은 오디오 출력인 AAudio로 재생합니다. 앱은 Android 9 이상에서만 사용합니다. 소리가 화면보다 늦을 때 사용 설정하세요. AAudio를 시작할 수 없으면 앱이 일반 오디오 출력을 사용합니다. 사용 설정했을 때 소리가 지직거리거나 끊기면 사용 중지하세요.</string>
-    <string name="app_name">Open Headunit</string>
+    <string name="app_name">Android Auto</string>
     <string name="menu">메뉴</string>
     <string name="settings">설정</string>
 
@@ -24,7 +24,7 @@
     <string name="no_apps_found">앱을 찾을 수 없습니다.</string>
     <string name="video">Android Auto</string>
     <string name="self_mode">단독 모드</string>
-    <string name="title">Open Headunit</string>
+    <string name="title">Android Auto</string>
     <string name="remove">제거</string>
     <string name="usb">USB</string>
     <string name="wifi">Wi-Fi</string>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Open Headunit</string>
+    <string name="app_name">Android Auto</string>
     <string name="menu">Nabídka</string>
     <string name="settings">Nastavení</string>
 
@@ -20,7 +20,7 @@
     <string name="no_apps_found">Nenalezeny žádné aplikace</string>
     <string name="video">Android Auto</string>
     <string name="self_mode">Samostatný režim</string>
-    <string name="title">Open Headunit</string>
+    <string name="title">Android Auto</string>
     <string name="remove">Odstranit</string>
     <string name="usb">USB</string>
     <string name="wifi">Wi-Fi</string>
